@@ -40,8 +40,8 @@ userLogin: UserLogin = new UserLogin()
 
       this.router.navigate(['/inicio'])
     }, erro => {
-      if(erro.status== 500){
-        this.alertas.showAlertInfo('Usuário ou senha estão incorretos!')
+      if(erro.status== 401){
+        this.alertas.showAlertDanger('Usuário ou senha estão incorretos!')
       }
     })
   }
